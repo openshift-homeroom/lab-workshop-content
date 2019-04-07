@@ -1,5 +1,5 @@
 var config = {
-    site_title: 'Workshop Sample Content'
+    site_title: 'Workshop Content'
 };
 
 module.exports = config;
