@@ -1,7 +1,7 @@
 ---
 Sort: 4
 Title: Additional Resources
-PrevPage: exercises/01-sample-content
+PrevPage: exercises/08-index-ordering
 ExitSign: Finish Workshop
 ---
 

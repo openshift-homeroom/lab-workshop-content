@@ -1,7 +1,7 @@
 ---
 Title: Sample Content
 PrevPage: ../setup
-NextPage: ../finish
+NextPage: 02-directory-layout
 ---
 
 This sample workshop, as well as explaining to you how to create a workshop, is provided as a starter template you can use. You will download a copy of it, then start modifying the content and configuration to suit what you need for your workshop.
