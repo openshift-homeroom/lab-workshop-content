@@ -1,1 +1,10 @@
 #!/bin/bash
+
+# This 'build' script is where you can add steps that should be run when
+# building the image for your custom workshop.
+
+# In this sample workshop we will be using 'git', so we need to set some
+# defaults for the name and email of the user for Git.
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"

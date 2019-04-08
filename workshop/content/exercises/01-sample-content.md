@@ -8,14 +8,14 @@ This sample workshop, as well as explaining to you how to create a workshop, is 
 
 To download the sample workshop run:
 
-```
-curl -sL -o /tmp/workshop-content.tar.gz https://github.com/openshift-labs/workshop-content/archive/develop.tar.gz
+```execute
+curl -sL -o /tmp/workshop-content.tar.gz https://github.com/openshift-labs/workshop-content/archive/master.tar.gz
 ```
 
 then unpack it into a sub directory, by running:
 
 ```execute
-mkdir lab-sample-content && tar --strip-components 1 -C lab-sample-content -xzf /tmp/workshop-content.tar.gz
+mkdir -p lab-sample-content && tar --strip-components 1 -C lab-sample-content -xzf /tmp/workshop-content.tar.gz
 ```
 
 This should leave you with the `lab-sample-content` sub directory. If you were creating your own workshop, you would name this after what your own workshop is on.
