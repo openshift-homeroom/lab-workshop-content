@@ -25,6 +25,8 @@ oc get route sample
 
 Use your browser to access the sample workshop.
 
+You may need to supply your login/password again for the OpenShift cluster you deployed the sample workshop to. You will only be able to access it if you are a project admin of the project it is deployed to.
+
 When you are finished you can delete the project you created, or if you used an existing project, run:
 
 ```

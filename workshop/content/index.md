@@ -5,6 +5,6 @@ NextPage: setup
 ExitSign: Setup Environment
 ---
 
-The Homeroom project aims to provide a set of applications useful in hosting training workshops. These can be supervised workshops run in a classroom like environment, or can be self paced workshops provided via an online interactive learning portal.
+In this workshop you will learn how to create and structure the content for a workshop. You will also learn about some of the ways that the workshop can be deployed.
 
-In this workshop you will learn how to create the initial content for a workshop, and how to deploy it so you can update and test it.
+The environment you are using is one of a set of applications useful in hosting training workshops. These can be supervised workshops run in a classroom like environment, or can be self paced workshops provided via an online interactive learning portal.
