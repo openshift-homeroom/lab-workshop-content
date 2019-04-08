@@ -2,7 +2,7 @@
 Sort: 2
 Title: Workshop Setup
 PrevPage: index
-NextPage: exercises/01-workshop-template
+NextPage: exercises/01-sample-content
 ExitSign: Start Workshop
 ---
 
