@@ -1,11 +1,11 @@
 ---
-Sort: 4
-Title: Additional Resources
+Sort: 3
+Title: Workshop Summary
 PrevPage: exercises/08-index-ordering
 ExitSign: Finish Workshop
 ---
 
-This is the end of the workshop. On this page it is a good idea to provide links to resources relevant to the workshop. This provides to anyone doing the workshop material they can research later to learn more.
+This is the end of the workshop. On this page it is a good idea to provide a summary of the workshop and any links to resources relevant to the workshop. This provides to anyone doing the workshop material they can research later to learn more.
 
 The link for this sample workshop content can be found at:
 
