@@ -1,8 +1,8 @@
 ---
 Sort: 1
 Title: Workshop Overview
-NextPage: exercises/01-workshop-template
-ExitSign: Start Workshop
+NextPage: setup
+ExitSign: Setup Environment
 ---
 
 The Homeroom project aims to provide a set of applications useful in hosting training workshops. These can be supervised workshops run in a classroom like environment, or can be self paced workshops provided via an online interactive learning portal.
