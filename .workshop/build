@@ -13,7 +13,7 @@ mv workshop /opt/app-root/workshop
 # Also delete some of the other files from the top of the Git repository we
 # don't need for running the workshop.
 
-rm -f Dockerfile README LICENSE
+rm -f Dockerfile README.md LICENSE
 
 # If the workshop requires Git, it is necessary to set some defaults for
 # the name and email of the user for Git.
