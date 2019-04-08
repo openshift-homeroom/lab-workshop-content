@@ -1,7 +1,7 @@
 ---
 Title: Index Ordering
 PrevPage: 07-page-navigation
-NextPage: ../finish
+NextPage: 09-presenter-slides
 ---
 
 ...
