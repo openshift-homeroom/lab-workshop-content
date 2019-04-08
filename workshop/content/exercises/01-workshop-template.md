@@ -1,6 +1,6 @@
 ---
 Title: Workshop Template
-PrevPage: ../index
+PrevPage: ../setup
 NextPage: ../finish
 ---
 
