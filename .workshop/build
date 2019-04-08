@@ -10,8 +10,13 @@
 
 mv workshop /opt/app-root/workshop
 
-# In this sample workshop the user will be using 'git', so we need to set
-# some defaults for the name and email of the user for Git.
+# Also delete some of the other files from the top of the Git repository we
+# don't need for running the workshop.
+
+rm -f Dockerfile README LICENSE
+
+# If the workshop requires Git, it is necessary to set some defaults for
+# the name and email of the user for Git.
 
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
