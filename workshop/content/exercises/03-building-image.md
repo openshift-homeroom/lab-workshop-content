@@ -4,7 +4,7 @@ PrevPage: 02-directory-layout
 NextPage: 04-workshop-config
 ---
 
-A container image is used as the means to package up your workshop. This way, the workshop content, along with all the command line tools and runtime language environments are in the one one package, with the applications used to display the workshop content and slides.
+A container image is used as the means to package up your workshop. This way, the workshop content, along with all the command line tools and runtime language environments are in the one package, with the applications used to display the workshop content and slides.
 
 You can use `docker` or `buildah` to build the image using the supplied `Dockerfile`, or if you have no need to install extra system packages, you could also use Source-to-Image (S2I) to build the image.
 
@@ -20,7 +20,7 @@ oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/m
 This will create a deployment called `custom`. Run:
 
 ```execute
-oc rollout status custom
+oc rollout status dc/custom
 ```
 
 to monitor the progress of the deployment.
