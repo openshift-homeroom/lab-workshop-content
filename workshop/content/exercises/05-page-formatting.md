@@ -25,7 +25,7 @@ This is where you set the title for the page, and provide details about how the 
 
 On top of the standard Markdown, a number of extensions are implemented. These are annotations you can apply to code blocks so that a user can click on the code block and have it copied to the terminal and executed, or copy the code block into the paste buffer so you can paste it to another window.
 
-To annotate a code so that it will be copied to the terminal and executed, use:
+To annotate a code block so that it will be copied to the terminal and executed, use:
 
 <pre><code>```execute
 echo upper
@@ -51,7 +51,7 @@ Using this, we have:
 echo lower
 ```
 
-Note that having two terminals is an option and not the default. For this workshop two are displayed because the `Dockerfile` and `.s2i/environment` files include `TERMINAL_TAB=split` environment variable. If you didn't need the terminal tab to be split and two terminal sessions show, remove the setting for this environment variable.
+Note that having two terminals is an option and not the default. For this workshop two are displayed because the `Dockerfile` and `.s2i/environment` files set the `TERMINAL_TAB=split` environment variable. If you didn't need the terminal tab to be split and two terminal sessions shown, remove the setting for this environment variable.
 
 In the case where you do have two terminals, if you want to be clear when a command is being executed in the upper terminal, instead of `execute`, you can use `execute-1` for the annotation on the code block.
 
@@ -73,10 +73,18 @@ followed by:
 <ctrl+c>
 ```
 
-Instead of executing a command, if you instead wanted to content of the code block to be copied into the paste buffer, you can use:
+When the user clicks on latter, the prior command will be interrupted.
+
+Instead of executing a command, if you instead wanted the content of the code block to be copied into the paste buffer, you can use:
 
 <pre><code>```copy
 echo copy
 ```</code></pre>
 
-You could then paste this into another window.
+Yielding:
+
+```copy
+echo copy
+```
+
+After clicking on this code block, you could then paste the content into another window.
