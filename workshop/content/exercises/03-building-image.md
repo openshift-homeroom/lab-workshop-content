@@ -13,8 +13,7 @@ In this workshop the ability to build the image using the `Dockerfile` will be u
 Before we set up the build, we will create a deployment for the workshop environment. To do this run:
 
 ```execute
-oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json \
-  --param APPLICATION_NAME=custom
+oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json --param APPLICATION_NAME=custom
 ```
 
 This will create a deployment called `custom`. Run:

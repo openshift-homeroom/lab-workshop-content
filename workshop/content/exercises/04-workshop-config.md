@@ -54,7 +54,7 @@ sed -i -e 's/Workshop Content/Custom Content/' workshop/config.js
 Having made a change, you can rebuild your custom image by running again:
 
 ```execute
-oc start-build --from-dir . --follow
+oc start-build custom --from-dir . --follow
 ```
 
 Once complete, [refresh the page](https://custom-%project_namespace%.%cluster_subdomain%) for your custom workshop to check the change works.
