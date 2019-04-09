@@ -31,7 +31,7 @@ cd lab-sample-content
 Run:
 
 ```execute
-ls -R
+find .
 ```
 
 to see what directories and files are included in the sample workshop.
