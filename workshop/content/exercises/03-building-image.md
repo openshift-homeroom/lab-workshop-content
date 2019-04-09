@@ -60,12 +60,12 @@ This should show the hostname to access the newly deployed workshop content from
 
 https://custom-%project_namespace%.%cluster_subdomain%
 
-You will be prompted to enter a login and password. Use `workshop` for the login name. To determine the password to use, run:
+You will be prompted to enter a login and password. Use `workshop` for the login name. Use the password output when the deployment was created. You can also run:
 
 ```execute
 oc set env dc/custom --list
 ```
 
-and use the value of the `AUTH_PASSWORD` environment variable set by the deployment.
+to see the password. Use the value of the `AUTH_PASSWORD` environment variable set by the deployment.
 
 Right now the content displayed is the same as this workshop. This is where you would start modifying the content.
