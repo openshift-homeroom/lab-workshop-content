@@ -13,7 +13,7 @@ In this workshop the ability to build the image using the `Dockerfile` will be u
 Before we set up the build, we will create a deployment for the workshop environment. To do this run:
 
 ```execute
-oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json --param APPLICATION_NAME=custom
+oc new-app workshop/deploy.json --param APPLICATION_NAME=custom
 ```
 
 This will create a deployment called `custom`. Run:
@@ -30,7 +30,7 @@ Now run:
 oc get is -l app=custom
 ```
 
-You should see that an image stream has been created corresponding to the workshop image used in the deployment. By default the image stream is set up to use the workshop dashboard image base class. This image will use some dummy workshop content used. We need to substitute that image with one built from out custom workshop content.
+You should see that an image stream has been created corresponding to the workshop image used in the deployment. By default the image stream is set up to use the workshop dashboard image base class. This image will use some dummy workshop content used when testing. We need to substitute that image with one built from our custom workshop content.
 
 To do this, create a new build of type binary.
 
@@ -44,7 +44,7 @@ Now trigger a build, using the files from then current directory.
 oc start-build custom --from-dir . --follow
 ```
 
-Wait for the new deployment using this image:
+Once the build has complete, wait for the new deployment using this image:
 
 ```execute
 oc rollout status dc/custom
@@ -60,6 +60,12 @@ This should show the hostname to access the newly deployed workshop content from
 
 https://custom-%project_namespace%.%cluster_subdomain%
 
-You may need to login again to this specific instance of the workshop.
+You will be prompted to enter a login and password. Use `workshop` for the login name. To determine the password to use, run:
+
+```execute
+oc set env dc/custom --list
+```
+
+and use the value of the `AUTH_PASSWORD` environment variable set by the deployment.
 
 Right now the content displayed is the same as this workshop. This is where you would start modifying the content.

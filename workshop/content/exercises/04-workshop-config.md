@@ -57,7 +57,7 @@ Having made a change, you can rebuild your custom image by again running:
 oc start-build custom --from-dir . --follow
 ```
 
-Wait for the new deployment using this image:
+Once the build has complete, wait for the new deployment using this image:
 
 ```execute
 oc rollout status dc/custom

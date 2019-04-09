@@ -16,6 +16,7 @@ Key sub directories and files contained within them are:
 
 * `workshop` - Directory under which your workshop files reside.
 * `workshop/config.js` - Configuration file for setting the workshop title, data analytics trackers, and custom data variables.
+* `workshop/deploy.json` - An OpenShift template used to deploy an instance of the workshop when working on content.
 * `workshop/content` - Directory under which your workshop content, including images to be displayed in the content, resides.
 * `workshop/slides` - Directory under which you can optionally provide a set of slides if your workshop incorporates a presentation.
 * `.workshop/build` - A script in which you can specify steps to be run when the image for your workshop is built.
