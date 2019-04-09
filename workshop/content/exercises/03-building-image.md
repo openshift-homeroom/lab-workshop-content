@@ -44,7 +44,13 @@ Now trigger a build, using the files from then current directory.
 oc start-build custom --from-dir . --follow
 ```
 
-Once the build has completed, run:
+Wait for the new deployment using this image:
+
+```execute
+oc rollout status dc/custom
+```
+
+Then run:
 
 ```execute
 oc get route custom
