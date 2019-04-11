@@ -42,7 +42,7 @@ When you click on the code block the command will be executed in the upper termi
 To have a command be executed in the lower terminal, use:
 
 <pre><code>```execute-2
-echo upper
+echo lower
 ```</code></pre>
 
 Using this, we have:
@@ -73,9 +73,9 @@ followed by:
 <ctrl+c>
 ```
 
-When the user clicks on latter, the prior command will be interrupted.
+When the user clicks on the latter, the prior command will be interrupted.
 
-Instead of executing a command, if you instead wanted the content of the code block to be copied into the paste buffer, you can use:
+Instead of executing a command, you wanted the content of the code block to be copied into the paste buffer, you can use:
 
 <pre><code>```copy
 echo copy
