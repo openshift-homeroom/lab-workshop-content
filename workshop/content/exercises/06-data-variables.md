@@ -26,10 +26,10 @@ This can be done inside of code blocks, as well as in URLs.
 
 For the way in which this workshop has been deployed, the values of these variables are:
 
-* username: %username%
-* project_namespace: %project_namespace%
-* cluster_subdomain: %cluster_subdomain%
-* base_url: %base_url%
-* console_url: %console_url%
-* terminal_url: %terminal_url%
-* slides_url: %slides_url%
+* `username`: %username%
+* `project_namespace`: %project_namespace%
+* `cluster_subdomain`: %cluster_subdomain%
+* `base_url`: %base_url%
+* `console_url`: %console_url%
+* `terminal_url`: %terminal_url%
+* `slides_url`: %slides_url%
