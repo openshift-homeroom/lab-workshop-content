@@ -18,11 +18,11 @@ The workshop environment provides the following built-in data variables.
 
 To use a data variable within the page content, surround it each side with `%`.
 
-<pre><code>%username%</code><pre/>
+<pre><code>%username%</code></pre>
 
 This can be done inside of code blocks, as well as in URLs.
 
-<pre><code>http://sample-%project_namespace%.%cluster_subdomain%/</code><pre/>
+<pre><code>http://sample-%project_namespace%.%cluster_subdomain%/</code></pre>
 
 For the way in which this workshop has been deployed, the values of these variables are:
 
