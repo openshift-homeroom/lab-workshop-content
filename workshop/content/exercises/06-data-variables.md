@@ -33,3 +33,26 @@ For the way in which this workshop has been deployed, the values of these variab
 * `console_url`: %console_url%
 * `terminal_url`: %terminal_url%
 * `slides_url`: %slides_url%
+
+You can introduce your own data variables by adding them in the `workshop/config.js` file. Data variables can be set with literal static values, or you can use Javscript code to calculate the value at the point the config file is read.
+
+You might for example set additional data variables based on existing environment variables set by a workshop spawner, or environment variables which were injected into the workshop environment when it was deployed. 
+
+```
+var config = {
+    site_title: 'Workshop Content',
+
+    // analytics: google_analytics,
+
+    variables: [
+        {
+            name: 'jupyterhub_namespace',
+            content: process.env.JUPYTERHUB_NAMESPACE
+        },
+        {
+            name: 'jupyterhub_application',
+            content: process.env.JUPYTERHUB_APPLICATION
+        }
+    ]
+};
+```
