@@ -11,7 +11,7 @@ The link for this sample workshop content can be found at:
 
 * https://github.com/openshift-labs/lab-workshop-content
 
-The workshop content is use to create a custom image deriving from the workshop dashboard image found at:
+The workshop content is used to create a custom image deriving from the workshop dashboard image found at:
 
 * https://github.com/openshift-labs/workshop-dashboard
 
@@ -20,3 +20,5 @@ The workshop can be deployed standalone follow instructions in that repository.
 Alternatively, if you need to deploy a workshop for multiple users, you need to use the workshop spawner found at:
 
 * https://github.com/openshift-labs/workshop-spawner
+
+Now that you have gone through this workshop, you can delete the pages under `workshop/content/exercises` and `workshop/slides` in your copy of this workshop, add your own pages, and setup meta data for page titles and navigation in pages to define the navigation path for users of your workshop.
