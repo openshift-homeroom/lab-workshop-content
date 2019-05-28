@@ -9,7 +9,7 @@ This is the end of the workshop. On this page it is a good idea to provide a sum
 
 The link for this sample workshop content can be found at:
 
-* https://github.com/openshift-labs/workshop-content
+* https://github.com/openshift-labs/lab-workshop-content
 
 The workshop content is use to create a custom image deriving from the workshop dashboard image found at:
 

@@ -24,7 +24,7 @@ If instead of the output `yes`, you see:
 no - no RBAC policy matched
 ```
 
-or any other errors, then the environment is not deployed correctly. Check the [GitHub repository](https://github.com/openshift-labs/workshop-content) for this sample workshop for details of how to deploy it.
+or any other errors, then the environment is not deployed correctly. Check the [GitHub repository](https://github.com/openshift-labs/lab-workshop-content) for this sample workshop for details of how to deploy it.
 
 For a more elaborate example of what you might supply for this step, where trying to support standalone deployment by a single user, use in a hosted workshop, or as part of a learning portal, see the [setup instructions](https://github.com/jupyter-on-openshift/lab-jupyter-notebooks-01/blob/master/workshop/content/setup.md) for the workshop on deploying Jupyter notebooks to OpenShift.
 

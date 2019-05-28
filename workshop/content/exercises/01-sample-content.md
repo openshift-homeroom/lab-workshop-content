@@ -9,7 +9,7 @@ This sample workshop, as well as explaining to you how to create a workshop, is 
 To download the sample workshop run:
 
 ```execute
-curl -sL -o /tmp/workshop-content.tar.gz https://github.com/openshift-labs/workshop-content/archive/master.tar.gz
+curl -sL -o /tmp/workshop-content.tar.gz https://github.com/openshift-labs/lab-workshop-content/archive/master.tar.gz
 ```
 
 then unpack it into a sub directory, by running:
