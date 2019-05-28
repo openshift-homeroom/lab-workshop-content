@@ -54,15 +54,15 @@ sed -i -e 's/Workshop Content/Custom Content/' workshop/config.js
 Having made a change, you can rebuild your custom image by again running:
 
 ```execute
-oc start-build custom --from-dir . --follow
+oc start-build custom-workshop --from-dir . --follow
 ```
 
 Once the build has complete, wait for the new deployment using this image:
 
 ```execute
-oc rollout status dc/custom
+oc rollout status dc/custom-workshop
 ```
 
-Once complete, [refresh the page](https://custom-%project_namespace%.%cluster_subdomain%) for your custom workshop to check the change works.
+Once complete, [refresh the page](https://custom-workshop-%project_namespace%.%cluster_subdomain%) for your custom workshop to check the change works.
 
 If you were happy with the change, you would then go onto adding and committing the change to your Git repository. This modify/re-build/re-fresh process is how you would go about working on your content and testing it.

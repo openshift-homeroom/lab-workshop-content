@@ -22,7 +22,7 @@ To use a data variable within the page content, surround it each side with `%`.
 
 This can be done inside of code blocks, as well as in URLs.
 
-<pre><code>http://sample-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;/</code></pre>
+<pre><code>http://sample-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;/</code></pre>
 
 For the way in which this workshop has been deployed, the values of these variables are:
 
@@ -36,7 +36,7 @@ For the way in which this workshop has been deployed, the values of these variab
 
 You can introduce your own data variables by adding them in the `workshop/config.js` file. Data variables can be set with literal static values, or you can use Javscript code to calculate the value at the point the config file is read.
 
-You might for example set additional data variables based on existing environment variables set by a workshop spawner, or environment variables which were injected into the workshop environment when it was deployed. 
+You might for example set additional data variables based on existing environment variables set by a workshop spawner, or environment variables which were injected into the workshop environment when it was deployed.
 
 ```
 var config = {

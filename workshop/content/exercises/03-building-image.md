@@ -13,13 +13,13 @@ In this workshop the ability to build the image using the `Dockerfile` will be u
 Before we set up the build, we will create a deployment for the workshop environment. To do this run:
 
 ```execute
-oc new-app workshop/deploy.json --param APPLICATION_NAME=custom
+oc new-app workshop/deploy.json --param APPLICATION_NAME=custom-workshop
 ```
 
-This will create a deployment called `custom`. Run:
+This will create a deployment called `custom-workshop`. Run:
 
 ```execute
-oc rollout status dc/custom
+oc rollout status dc/custom-workshop
 ```
 
 to monitor the progress of the deployment.
@@ -27,7 +27,7 @@ to monitor the progress of the deployment.
 Now run:
 
 ```execute
-oc get is -l app=custom
+oc get is -l app=custom-workshop
 ```
 
 You should see that an image stream has been created corresponding to the workshop image used in the deployment. By default the image stream is set up to use the workshop dashboard image base class. This image will use some dummy workshop content used when testing. We need to substitute that image with one built from our custom workshop content.
@@ -35,35 +35,35 @@ You should see that an image stream has been created corresponding to the worksh
 To do this, create a new build of type binary.
 
 ```execute
-oc new-build --name custom --binary
+oc new-build --name custom-workshop --binary
 ```
 
 Now trigger a build, using the files from then current directory.
 
 ```execute
-oc start-build custom --from-dir . --follow
+oc start-build custom-workshop --from-dir . --follow
 ```
 
 Once the build has complete, wait for the new deployment using this image:
 
 ```execute
-oc rollout status dc/custom
+oc rollout status dc/custom-workshop
 ```
 
 Then run:
 
 ```execute
-oc get route custom
+oc get route custom-workshop
 ```
 
 This should show the hostname to access the newly deployed workshop content from your browser. In this case you should also be able to click on:
 
-https://custom-%project_namespace%.%cluster_subdomain%
+https://custom-workshop-%project_namespace%.%cluster_subdomain%
 
 You will be prompted to enter a login and password. Use `workshop` for the login name. Use the password output when the deployment was created. You can also run:
 
 ```execute
-oc set env dc/custom --list
+oc set env dc/custom-workshop --list
 ```
 
 to see the password. Use the value of the `AUTH_PASSWORD` environment variable set by the deployment.
