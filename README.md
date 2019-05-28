@@ -1,5 +1,5 @@
-Workshop Content
-================
+LAB - Workshop Content
+======================
 
 This repository provides sample content for a workshop that can be used as the starting point for your own workshop. The sample content when deployed, will guide you through how to use the sample content, what the various directories and files are for, and how to format the contents of files.
 
@@ -13,7 +13,7 @@ In the active project you want to use, run:
 
 ```
 oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json \
-  --param TERMINAL_IMAGE="quay.io/openshiftlabs/workshop-content:master" \
+  --param TERMINAL_IMAGE="quay.io/openshiftlabs/lab-workshop-content:master" \
   --param APPLICATION_NAME=sample
 ```
 
