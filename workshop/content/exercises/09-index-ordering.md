@@ -10,7 +10,7 @@ The top part of the page index will list those pages which are found on the top 
 
 By default, the order in which pages are displayed in their respective sections, is based on the name of the file for that page. Similarly, the sections corresponding to the sub directories, are ordered base on the names of the sub directories.
 
-To override the displayed order for pages in a section, you can add the `Sort` field to the meta data of the pages. By adding this to all pages in that section, you can control precisely the order they are displayed.
+To override the displayed order for pages in a section, you can add the `Sort` field to the meta data of the pages. This should be an integer value giving its position in the sorting order. By adding this to all pages in that section, you can control precisely the order they are displayed.
 
 An alternative, especially for pages in sub directories, is to add a number (zero padded to the left as necessary) at the start of the name of the file for that page. To override what name is used when the page is displayed in the page index, you can set the `Title` field in the meta data of that page.
 
