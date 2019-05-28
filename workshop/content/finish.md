@@ -22,3 +22,5 @@ Alternatively, if you need to deploy a workshop for multiple users, you need to 
 * https://github.com/openshift-labs/workshop-spawner
 
 Now that you have gone through this workshop, you can delete the pages under `workshop/content/exercises` and `workshop/slides` in your copy of this workshop, add your own pages, and setup meta data for page titles and navigation in pages to define the navigation path for users of your workshop.
+
+When editing your workshop content on your local computer, you can use editors such as Atom and VSCode. Because images are placed in the same directory as the markdown files, preview modes of these editors will work, including embedded images, and you can see what your content should look like without needing to first deploy it.
