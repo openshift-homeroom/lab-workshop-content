@@ -33,4 +33,4 @@ When you are finished you can delete the project you created, or if you used an 
 oc delete all,serviceaccount,rolebinding,configmap -l app=sample-workshop
 ```
 
-Note that this will not delete anything which may have been deployed when you went through the sample workshop. Ensure that you go right through the workshop and execute any steps described in it for deleting any deployments it has you make.
+Note that this will not delete anything which may have been deployed when you went through the sample workshop. Ensure that you go right through the workshop and execute any steps described in it for deleting any deployments it had you make.

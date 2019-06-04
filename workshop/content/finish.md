@@ -31,7 +31,7 @@ If you need to delete the custom content you deployed from this workshop, run:
 oc delete all,serviceaccount,rolebinding,configmap -l app=custom-workshop
 ```
 
-To delete the workshop itself, from where ever you originally deployed the workshop, run:
+To delete the workshop itself, from where you originally deployed the workshop, run:
 
 ```copy
 oc delete all,serviceaccount,rolebinding,configmap -l app=sample-workshop
