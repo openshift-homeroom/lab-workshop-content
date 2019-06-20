@@ -22,7 +22,7 @@ To use a data variable within the page content, surround it each side with `%`.
 
 This can be done inside of code blocks, as well as in URLs.
 
-<pre><code>http://sample-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;/</code></pre>
+<pre><code>http://lab-sample-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;/</code></pre>
 
 For the way in which this workshop has been deployed, the values of these variables are:
 

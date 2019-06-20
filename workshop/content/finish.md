@@ -28,11 +28,11 @@ When editing your workshop content on your local computer, you can use editors s
 If you need to delete the custom content you deployed from this workshop, run:
 
 ```execute
-oc delete all,serviceaccount,rolebinding,configmap -l app=custom-workshop
+oc delete all,serviceaccount,rolebinding,configmap -l app=lab-sample-workshop
 ```
 
 To delete the workshop itself, from where you originally deployed the workshop, run:
 
 ```copy
-oc delete all,serviceaccount,rolebinding,configmap -l app=sample-workshop
+oc delete all,serviceaccount,rolebinding,configmap -l app=lab-workshop-content
 ```

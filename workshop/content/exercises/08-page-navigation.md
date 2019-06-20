@@ -25,7 +25,7 @@ In this workshop, the main pages containing the steps the user is to run, are lo
 ```
 index.md
 setup.md
-exercises/01-sample-content.md
+exercises/01-sample-workshop.md
 exercises/02-directory-layout.md
 exercises/03-building-image.md
 exercises/04-workshop-config.md
@@ -45,7 +45,7 @@ When referring to a page in the same directory, you would use just the name of t
 Sort: 2
 Title: Workshop Setup
 PrevPage: index
-NextPage: exercises/01-sample-content
+NextPage: exercises/01-sample-workshop
 ExitSign: Start Workshop
 ---
 ```

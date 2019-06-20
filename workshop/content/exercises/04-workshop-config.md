@@ -45,24 +45,24 @@ The `config` variable is a Javascript dictionary in which configuration settings
 * `analytics` - The analytics data tracking code for any service you want to use to track usage of your workshop.
 * `variables` - A list of custom data variables which will be available for use in the content of your pages. We will cover how to use data variables later.
 
-Change the `site_title` variable to a value which describes what your workshop is about. For this workshop, change it to `Custom Content`. You can use `vi` or `nano` in the terminal, or you can run:
+Change the `site_title` variable to a value which describes what your workshop is about. For this workshop, change it to `Sample Workshop`. You can use `vi` or `nano` in the terminal, or you can run:
 
 ```execute
-sed -i -e 's/Workshop Content/Custom Content/' workshop/config.js
+sed -i -e 's/Workshop Content/Sample Workshop/' workshop/config.js
 ```
 
 Having made a change, you can rebuild your custom image by again running:
 
 ```execute
-oc start-build custom-workshop --from-dir . --follow
+oc start-build lab-sample-workshop --from-dir . --follow
 ```
 
 Once the build has complete, wait for the new deployment using this image:
 
 ```execute
-oc rollout status dc/custom-workshop
+oc rollout status dc/lab-sample-workshop
 ```
 
-Once complete, [refresh the page](https://custom-workshop-%project_namespace%.%cluster_subdomain%) for your custom workshop to check the change works.
+Once complete, [refresh the page](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) for your workshop to check the change works.
 
 If you were happy with the change, you would then go onto adding and committing the change to your Git repository. This modify/re-build/re-fresh process is how you would go about working on your content and testing it.

@@ -1,5 +1,5 @@
 ---
-Title: Sample Content
+Title: Sample Workshop
 PrevPage: ../setup
 NextPage: 02-directory-layout
 ---
@@ -15,17 +15,17 @@ curl -sL -o /tmp/workshop-content.tar.gz https://github.com/openshift-labs/lab-w
 then unpack it into a sub directory, by running:
 
 ```execute
-mkdir -p lab-sample-content && tar --strip-components 1 -C lab-sample-content -xzf /tmp/workshop-content.tar.gz
+mkdir -p lab-sample-workshop && tar --strip-components 1 -C lab-sample-workshop -xzf /tmp/workshop-content.tar.gz
 ```
 
-This should leave you with the `lab-sample-content` sub directory. If you were creating your own workshop, you would name this after what your own workshop is on.
+This should leave you with the `lab-sample-workshop` sub directory. If you were creating your own workshop, you would name this after what your own workshop is on.
 
 Our convention is to always prefix the directory name, and thus the Git repository name where it is being hosted, with the `lab-` prefix. This way it stands out as a workshop or lab when you have a whole bunch of Git repositories on the same Git hosting service account or organisation.
 
 With the sample workshop downloaded, change your working directory so you are in the top level directory for the workshop.
 
 ```execute
-cd lab-sample-content
+cd lab-sample-workshop
 ```
 
 Run:

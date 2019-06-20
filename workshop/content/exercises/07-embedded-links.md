@@ -18,7 +18,7 @@ A URL can be provided using a data variable. This could be one of the builtin da
 
 You can also define a URL where components of the URL are provided by data variables. Data variables useful in this content are `project_namespace` and `cluster_subdomain` as they can be used to create a URL to an application deployed from a workshop.
 
-* [Application](https://custom-workshop-%project_namespace%.%cluster_subdomain%) - <code>https&colon;//custom-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;</code>
+* [Application](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) - <code>https&colon;//custom-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;</code>
 
 A number of the builtin data variables which provide a URL value are treated in a special way when clicked.
 

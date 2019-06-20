@@ -1,6 +1,6 @@
 ---
 Title: Directory Layout
-PrevPage: 01-sample-content
+PrevPage: 01-sample-workshop
 NextPage: 03-building-image
 ---
 

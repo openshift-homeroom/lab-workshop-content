@@ -12,25 +12,28 @@ oc new-project labs
 In the active project you want to use, run:
 
 ```
-oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json \
-  --param TERMINAL_IMAGE="quay.io/openshiftlabs/lab-workshop-content:1.1" \
-  --param APPLICATION_NAME=sample-workshop
+oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/2.14.4/templates/production.json \
+  --param TERMINAL_IMAGE="quay.io/openshiftlabs/lab-workshop-content:1.2" \
+  --param APPLICATION_NAME=lab-workshop-content \
+  --param AUTH_USERNAME=workshop
 ```
 
-To get the hostname for the sample workshop, run:
+Access to the workshop environment will be password protected and you will see a browser popup for entering user credentials. The username to enter is `workshop`. The password is displayed in the output from deploying the workshop environment, but can also be queried by running:
 
 ```
-oc get route sample-workshop
+oc set env --list dc/lab-workshop-content | grep AUTH_PASSWORD
 ```
 
-Use your browser to access the sample workshop.
+With the password in hand, the hostname for accessing the sample workshop environment in your browser can be found by running:
 
-You may need to supply your login/password again for the OpenShift cluster you deployed the sample workshop to. You will only be able to access it if you are a project admin of the project it is deployed to.
+```
+oc get route lab-workshop-content
+```
 
 When you are finished you can delete the project you created, or if you used an existing project, run:
 
 ```
-oc delete all,serviceaccount,rolebinding,configmap -l app=sample-workshop
+oc delete all,serviceaccount,rolebinding,configmap -l app=lab-workshop-content
 ```
 
-Note that this will not delete anything which may have been deployed when you went through the sample workshop. Ensure that you go right through the workshop and execute any steps described in it for deleting any deployments it had you make.
+Note that this will not delete anything which may have been deployed when you went through the sample workshop. Ensure that you go right through the workshop and execute any steps described in it for deleting any deployments it had you make. Alternatively, if you deploy the workshop environment in a fresh project, delete the project.

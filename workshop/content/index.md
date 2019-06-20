@@ -9,4 +9,4 @@ The environment you are using is one of a set of applications useful in hosting 
 
 In this workshop you will learn how to create and structure the content for a workshop. You will also learn how to deploy your workshop content to be able to test it.
 
-This home page for the workshop is where you would provide the description of your own workshop.
+For your own workshop, this initial home page is where you would provide a description of what your workshop is about.
