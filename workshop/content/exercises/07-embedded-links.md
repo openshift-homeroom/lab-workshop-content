@@ -18,7 +18,7 @@ A URL can be provided using a data variable. This could be one of the builtin da
 
 You can also define a URL where components of the URL are provided by data variables. Data variables useful in this content are `project_namespace` and `cluster_subdomain` as they can be used to create a URL to an application deployed from a workshop.
 
-* [Application](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) - <code>https&colon;//custom-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;</code>
+* [Application](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) - <code>https&colon;//lab-sample-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;</code>
 
 A number of the builtin data variables which provide a URL value are treated in a special way when clicked.
 
@@ -38,7 +38,7 @@ In the case of `console_url`, you can append a path to the URL, and the console 
 * [Events](%console_url%/k8s/ns/%project_namespace%/events) - <code>&percnt;console_url&percnt;/k8s/ns/&percnt;project_namespace&percnt;/events</code>
 * [Pods](%console_url%/k8s/ns/%project_namespace%/pods) - <code>&percnt;console_url&percnt;/k8s/ns/&percnt;project_namespace&percnt;/pods</code>
 
-In the case of `slides_url`, the slides will be brought to the front if not already visible. If you are using `revealjs` for the slides and you have history enabled, or are using section IDs to support named links, you can use an anchor to a specific slide and that specific slide will be opened.
+In the case of `slides_url`, the slides will be brought to the front if not already visible. If you are using reveal.js for the slides and you have history enabled, or are using section IDs to support named links, you can use an anchor to a specific slide and that specific slide will be opened.
 
 * [Slides](%slides_url%) - <code>&percnt;slides_url&percnt;</code>
 * [Questions](%slides_url%#/questions) - <code>&percnt;slides_url&percnt;#/questions</code>

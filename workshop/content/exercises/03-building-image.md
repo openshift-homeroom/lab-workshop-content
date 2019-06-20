@@ -33,7 +33,7 @@ Now run:
 oc get is -l app=lab-sample-workshop
 ```
 
-You should see that an image stream has been created corresponding to the workshop image used in the deployment. By default the image stream is set up to use the workshop dashboard image base class. This image will use some dummy workshop content used when testing. We need to substitute that image with one built from our sample workshop content.
+You should see that an image stream has been created corresponding to the workshop image used in the deployment. By default the image stream is set up to use the workshop dashboard image base class. This image will use some dummy workshop content used when testing. We need to substitute that image with one built from our workshop content.
 
 To do this, create a new build of type binary.
 
@@ -41,7 +41,9 @@ To do this, create a new build of type binary.
 oc new-build --name lab-sample-workshop --binary
 ```
 
-Now trigger a build, using the files from then current directory.
+The name used for the build needs to be the same as the image stream above.
+
+Now trigger a build, using the files from the current directory.
 
 ```execute
 oc start-build lab-sample-workshop --from-dir . --follow
@@ -70,3 +72,5 @@ oc set env dc/lab-sample-workshop --list | grep AUTH_PASSWORD
 ```
 
 Right now the content displayed is the same as this workshop. This is where you would start modifying the content.
+
+When you have a code block marked for execution, you can copy it instead of executing it, by pressing the SHIFT key while clicking on it.
