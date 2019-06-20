@@ -35,6 +35,10 @@ exercises/07-embedded-links.md
 exercises/08-page-navigation.md
 exercises/09-index-ordering.md
 exercises/10-presenter-slides.md
+exercises/11-build-and-setup.md
+exercises/12-asciidoc-support.md
+exercises/13-share-workshops.md
+exercises/14-deploy-workshops.md
 finish.md
 ```
 
@@ -50,12 +54,12 @@ ExitSign: Start Workshop
 ---
 ```
 
-To refer to a page in a parent directory, use `..`. For example, the `exercises/10-presenter-slides.md` page contained:
+To refer to a page in a parent directory, use `..`. For example, the `exercises/14-deploy-workshops.md` page contained:
 
 ```
 ---
-Title: Presenter Slides
-PrevPage: 09-index-ordering
+Title: Deploy Workshops
+PrevPage: 13-share-workshops
 NextPage: ../finish
 ---
 ```
@@ -76,7 +80,7 @@ The recommendation is that for the last page, the `ExitSign` be set to `Finish W
 ---
 Sort: 3
 Title: Workshop Summary
-PrevPage: exercises/10-presenter-slides
+PrevPage: exercises/14-deploy-workshops
 ExitSign: Finish Workshop
 ---
 ```

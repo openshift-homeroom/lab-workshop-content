@@ -1,7 +1,7 @@
 ---
 Title: Presenter Slides
 PrevPage: 09-index-ordering
-NextPage: ../finish
+NextPage: 11-build-and-setup
 ---
 
 If a workshop includes a presentation, slides can be included by placing them in the `workshop/slides` directory. Anything in this directory will be served up as static files via a HTTP web server. The default web page should be provided as `index.html`.

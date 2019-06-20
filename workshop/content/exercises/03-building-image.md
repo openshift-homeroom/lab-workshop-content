@@ -6,7 +6,7 @@ NextPage: 04-workshop-config
 
 A container image is used as the means to package up your workshop. This way, the workshop content, along with all the command line tools and runtime language environments are in the one package, with the applications used to display the workshop content and slides.
 
-You can use `docker` or `buildah` to build the image using the supplied `Dockerfile`, or if you have no need to install extra system packages, you could also use Source-to-Image (S2I) to build the image.
+You can use `docker` or `buildah` to build the image using the supplied `Dockerfile`. If you have no need to install extra system packages, you could also use Source-to-Image (S2I) to build the image as the base image used in a `docker` type build, can also be used as an S2I builder.
 
 In this workshop the ability to build the image using the `Dockerfile` will be used. Rather than use `docker` or `buildah`, we will setup a build configuration in OpenShift, pushing the workshop content using a binary input build.
 
@@ -35,10 +35,12 @@ oc get is -l app=lab-sample-workshop
 
 You should see that an image stream has been created corresponding to the workshop image used in the deployment. By default the image stream is set up to use the workshop dashboard image base class. This image will use some dummy workshop content used when testing. We need to substitute that image with one built from our workshop content.
 
-To do this, create a new build of type binary.
+To do this, we are going to create a build configuration in OpenShift for a `docker` type build. The build will be created as a binary input build so we can inject the source code for the build from the local directory.
+
+To create the binary input build configuration run:
 
 ```execute
-oc new-build --name lab-sample-workshop --binary
+oc new-build --name lab-sample-workshop --binary --strategy docker
 ```
 
 The name used for the build needs to be the same as the image stream above.
