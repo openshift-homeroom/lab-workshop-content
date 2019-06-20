@@ -15,13 +15,17 @@ The workshop content is used to create a custom image deriving from the workshop
 
 * https://github.com/openshift-labs/workshop-dashboard
 
-The workshop can be deployed standalone follow instructions in that repository.
+The workshop can be deployed standalone by following instructions in that repository.
 
 Alternatively, if you need to deploy a workshop for multiple users, you need to use the workshop spawner found at:
 
 * https://github.com/openshift-labs/workshop-spawner
 
-Now that you have gone through this workshop, you can delete the pages under `workshop/content/exercises` and `workshop/slides` in your copy of this workshop, add your own pages, and setup meta data for page titles and navigation in pages to define the navigation path for users of your workshop.
+For further information on using `workshop-spawner`, see the workshops:
+
+* https://github.com/openshift-labs/lab-learning-portal
+
+Now that you have gone through this workshop, you can download it as a starting point for your own workshop. Delete the pages under the `workshop/content/exercises` and `workshop/slides` directory in your copy, add your own pages, then setup meta data for page titles and navigation in pages to define the navigation path for users of your workshop.
 
 When editing your workshop content on your local computer, you can use editors such as Atom and VSCode. Because images are placed in the same directory as the markdown files, preview modes of these editors will work, including embedded images, and you can see what your content should look like without needing to first deploy it.
 
