@@ -1,57 +1,60 @@
----
-Title: Workshop Config
-PrevPage: 03-building-image
-NextPage: 05-page-formatting
----
+There are different ways you can setup configuration for a workshop. The way used in the sample workshops is through YAML files.
 
-The first change you will want to make is to set the title for your workshop. This is what appears in the banner at the top of content in the left side of the workshop dashboard.
+The `workshop/modules.yaml` file provides details of available modules which make up your workshop, and data variables for use in content.
 
-This change can be made in the `workshop/config.js` file. This file is used to set the workshop title, add a data analytics tracking code, and set custom data variables.
+In the case of the list of modules, not all modules may end up being used. This is because this list represents the full set of modules you have available and might use. You may want to run variations of your workshop, such as for different programming languages. As such, which modules are active and will be used for a specific workshop are listed in the separate `workshop/workshop.yaml` file, along with the name to be given to the workshop when using that set of modules.
 
-The config file is Javascript code. The format of the file is:
+By default the `workshop.yaml` file will be used to drive what modules are used. Where you do have variations as to what content should be used, you can provide multiple workshop files with different names. You might for example instead provide `workshop-java.yaml` and `workshop-python.yaml`.
+
+Where you have multiple workshop files, and don't have the default `workshop.yaml` file, you can specify the default workshop file to use by setting the `WORKSHOP_FILE` environment variable in the `Dockerfile`, to the name of the workshop file. The environment variable will be able to be overridden for a deployment to select a different workshop file when necessary.
+
+The format for listing the available modules in the `workshop/modules.yaml` file is:
 
 ```
-var google_analytics = `
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135921114-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-XXXXXXXXX-1');
-</script>
-`;
-
-var config = {
-    site_title: 'Workshop Content',
-
-    // analytics: google_analytics,
-
-    variables: [
-        {
-            name: 'name',
-            content: 'value'
-        }
-    ]
-};
-
-module.exports = config;
+modules:
+    workshop-overview:
+        name: Workshop Overview
+        exit_sign: Setup Environment
+    setup-environment:
+        name: Setup Environment
+        exit_sign: Start Workshop
+    exercises/01-sample-content:
+        name: Sample Content
+    workshop-summary:
+        name: Workshop Summary
+        exit_sign: Finish Workshop
 ```
 
-The `config` variable is a Javascript dictionary in which configuration settings are added. The key settings are:
+Each available module is listed under `modules`, where the name used corresponds to the path to the file containing the content for that module, with any extension identifying the content type left off.
 
-* `site_title` - The title of your workshop. Keep this short as there is only limited space when content is displayed in the dashboard along side the terminal. If the title is too long it will be wrapped.
-* `analytics` - The analytics data tracking code for any service you want to use to track usage of your workshop.
-* `variables` - A list of custom data variables which will be available for use in the content of your pages. We will cover how to use data variables later.
+For each module, set the `name` field to the title to be displayed for that module. If no fields are provided and `name` is not set, the title for the module will be calculated from the name of the module file. The purpose of the `exit_sign` field will be discussed later when looking at page navigation.
 
-Change the `site_title` variable to a value which describes what your workshop is about. For this workshop, change it to `Sample Workshop`. You can use `vi` or `nano` in the terminal, or you can run:
+The corresponding `workshop/workshop.yaml` file, where all available modules were being used, would have the format:
+
+```
+name: Markdown Sample
+
+modules:
+    activate:
+    - workshop-overview
+    - setup-environment
+    - exercises/01-sample-content
+    - workshop-summary
+```
+
+The top level `name` field in this file is the title to be displayed for the complete workshop. It will be shown in the banner for the workshop content when viewing the workshop environment in your web browser.
+
+The `modules.activate` field is a list of modules to be used for the workshop. The names in this list must match the names as they appear in the modules file.
+
+The first change you will want to make is to set the title for your workshop by changing the `name` field.
+
+For this workshop, change it to `Sample Workshop`. You can use `vi` or `nano` in the terminal, or you can run:
 
 ```execute
-sed -i -e 's/Workshop Content/Sample Workshop/' workshop/config.js
+sed -i -e 's/Markdown Sample/Sample Workshop/' workshop/workshop.yaml
 ```
 
-Having made a change, you can rebuild your custom image by again running:
+Having made a change, you can rebuild the image and redeploy it by running:
 
 ```execute
 oc start-build lab-sample-workshop --from-dir . --follow
@@ -65,4 +68,4 @@ oc rollout status dc/lab-sample-workshop
 
 Once complete, [refresh the page](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) for your workshop to check the change works.
 
-If you were happy with the change, you would then go onto adding and committing the change to your Git repository. This modify/re-build/re-fresh process is how you would go about working on your content and testing it.
+If you were happy with the change, you would then go onto adding and committing the change to your Git repository. This modify/build/refresh process is how you would go about working on your content and testing it.

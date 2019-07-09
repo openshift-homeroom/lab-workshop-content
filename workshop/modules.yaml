@@ -1,0 +1,49 @@
+config:
+    vars:
+    - name: OC_VERSION
+      value: undefined
+    - name: KUBECTL_VERSION
+      value: undefined
+
+modules:
+    workshop-overview:
+        name: Workshop Overview
+        exit_sign: Setup Environment
+    setup-environment:
+        name: Workshop Setup
+        exit_sign: Start Workshop
+    exercises/01-sample-workshop:
+        name: Sample Workshop
+    exercises/02-directory-layout:
+        name: Directory Layout
+    exercises/03-building-image:
+        name: Building Image
+    exercises/04-workshop-config:
+        name: Workshop Config
+    exercises/05-page-formatting:
+        name: Page Formatting
+    exercises/06-data-variables:
+        name: Data Variables
+    exercises/07-embedded-links:
+        name: Embedding Links
+    exercises/08-page-navigation:
+        name: Page Navigation
+    exercises/09-template-engine:
+        name: Template Engine
+    exercises/10-presenter-slides:
+        name: Presenter Slides
+    exercises/11-build-and-setup:
+        name: Build and Setup
+    exercises/12-share-workshops:
+        name: Share Workshops
+    exercises/13-deploy-workshops:
+        name: Deploy Workshops
+    exercises/14-remote-hosting:
+        name: Remote Hosting
+    exercises/15-local-deployment:
+        name: Local Deployment
+    exercises/16-editing-content:
+        name: Editing Content
+    workshop-summary:
+        name: Workshop Summary
+        exit_sign: Finish Workshop

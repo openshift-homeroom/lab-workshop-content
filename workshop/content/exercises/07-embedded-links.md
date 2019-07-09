@@ -1,9 +1,3 @@
----
-Title: Embedded Links
-PrevPage: 06-data-variables
-NextPage: 08-page-navigation
----
-
 URLs can be included in workshop content. This can be the literal URL, or the Markdown syntax for including and labelling a URL. What happens when a user clicks on a URL, will depend on the specific URL.
 
 In the case of the URL being an external web site, when the URL is clicked, the URL will be opened in a new browser tab or window.
@@ -20,7 +14,7 @@ You can also define a URL where components of the URL are provided by data varia
 
 * [Application](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) - <code>https&colon;//lab-sample-workshop-&percnt;project_namespace&percnt;.&percnt;cluster_subdomain&percnt;</code>
 
-A number of the builtin data variables which provide a URL value are treated in a special way when clicked.
+A number of the builtin data variables which provide a URL path value are treated in a special way when clicked.
 
 * `terminal_url` - When clicked the terminal tab will be selected and brought to the front if not already visible.
 * `console_url` - When clicked the console tab will be selected and brought to the front if not already visible.

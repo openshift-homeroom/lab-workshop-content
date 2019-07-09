@@ -1,31 +1,8 @@
----
-Title: Page Formatting
-PrevPage: 04-workshop-config
-NextPage: 06-data-variables
----
+Individual module files can use either Markdown or AsciiDoc markup formats. The extension used on the file should be `.md` or `.adoc`, corresponding to which formatting markup style you want to use. The extension is though always left off when listing the module name in the YAML files used for configuration.
 
-As you have gone through this workshop, you have seen how you have been guided from one topic to the next.
+In conjunction with the standard Markdown and AsciiDoc, additional annotations can be applied to code blocks. The annotations are used to indicate that a user can click on the code block and have it copied to the terminal and executed, or copy the code block into the paste buffer so they can paste it to another window.
 
-The starting point for the workshop was the page `workshop/content/index.md`. This is the home page.
-
-The markup format used in pages is Markdown, specifically the [GitHub flavored Markdown](https://github.github.com/gfm/).
-
-In addition to the content of the page, each page contains a header providing metadata about the page.
-
-```
----
-Sort: 1
-Title: Workshop Overview
-NextPage: setup
-ExitSign: Setup Environment
----
-```
-
-This is where you set the title for the page, and provide details about how the pages link together to provide a navigation path for the workshop. Details about defining the navigation path are covered later, as is overriding sorting for how pages are listed in the page index.
-
-On top of the standard Markdown, a number of extensions are implemented. These are annotations you can apply to code blocks so that a user can click on the code block and have it copied to the terminal and executed, or copy the code block into the paste buffer so you can paste it to another window.
-
-To annotate a code block so that it will be copied to the terminal and executed, use:
+If using Markdown, to annotate a code block so that it will be copied to the terminal and executed, use:
 
 <pre><code>```execute
 echo upper
@@ -39,7 +16,15 @@ echo upper
 
 When you click on the code block the command will be executed in the upper terminal.
 
-To have a command be executed in the lower terminal, use:
+If using AsciiDoc, you would instead use the `role` annotation in an existing code block:
+
+<pre><code>[source,bash,role=execute]
+----
+echo upper
+----
+</code></pre>
+
+To have a command be executed in the lower terminal, use `execute-2` instead of `execute`:
 
 <pre><code>```execute-2
 echo lower
@@ -51,11 +36,11 @@ Using this, we have:
 echo lower
 ```
 
-Note that having two terminals is an option and not the default. For this workshop two are displayed because the `Dockerfile` and `.s2i/environment` files set the `TERMINAL_TAB=split` environment variable. If you didn't need the terminal tab to be split and two terminal sessions shown, remove the setting for this environment variable.
+Note that having two terminals is an option and not the default. For this workshop two are displayed because the `Dockerfile` files set the `TERMINAL_TAB=split` environment variable. If you didn't need the terminal tab to be split and two terminal sessions shown, remove the setting for this environment variable.
 
 In the case where you do have two terminals, if you want to be clear when a command is being executed in the upper terminal, instead of `execute`, you can use `execute-1` for the annotation on the code block.
 
-In most cases, a command you execute would complete straight away. If you need to run a command that never returns, with the user needing to interrupt it to stop it, you can use the value `<ctrl+c>` in the code block.
+In most cases, a command you execute would complete straight away. If you need to run a command that never returns, with the user needing to interrupt it to stop it, you can use the special string `<ctrl+c>` in the code block.
 
 <pre><code>```execute
 &lt;ctrl+c&gt;
@@ -88,3 +73,11 @@ echo copy
 ```
 
 After clicking on this code block, you could then paste the content into another window.
+
+For AsciiDoc, similar to `execute`, you would add the `role` of `copy`:
+
+<pre><code>[source,bash,role=copy]
+----
+echo copy
+----
+</code></pre>

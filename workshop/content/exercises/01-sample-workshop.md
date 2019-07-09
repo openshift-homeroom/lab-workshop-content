@@ -1,21 +1,26 @@
----
-Title: Sample Workshop
-PrevPage: ../setup
-NextPage: 02-directory-layout
----
+To get you started with your own workshop content, a number of sample Git repositories are provided. These are:
 
-This sample workshop, as well as explaining to you how to create a workshop, is provided as a starter template you can use. You will download a copy of it, then start modifying the content and configuration to suit what you need for your workshop.
+* https://github.com/openshift-homeroom/lab-markdown-sample
+* https://github.com/openshift-homeroom/lab-asciidoc-sample
 
-To download the sample workshop run:
+You have two options for how you can get started with these sample Git repositories.
+
+The first option is to use the GitHub feature for creating a new repository from a [Git repository template](https://help.github.com/en/articles/creating-a-repository-from-a-template). This is different to forking an existing Git repository on GitHub, in that it creates a fresh repository with the latest content from the original Git repository. In creating a Git repository using this feature, it does not inherit any commit history from the original, and it is not linked to the original. Once you have created your copy of the Git repository, you can check out a copy to your own machine and start working on it.
+
+The second option is to download a copy of one of the sample Git repositories from the releases page for that Git repository. From this you can then create a local Git repository, and push it up to a Git repository hosting service of your choice.
+
+In this workshop we will use the second option of downloading a copy of the sample Git repository from the GitHub releases archive.
+
+To download the sample workshop using Markdown formatting, run:
 
 ```execute
-curl -sL -o /tmp/workshop-content.tar.gz https://github.com/openshift-labs/lab-workshop-content/archive/master.tar.gz
+curl -sL -o /tmp/lab-markdown-sample.tar.gz https://github.com/openshift-homeroom/lab-markdown-sample/archive/1.0.tar.gz
 ```
 
 then unpack it into a sub directory, by running:
 
 ```execute
-mkdir -p lab-sample-workshop && tar --strip-components 1 -C lab-sample-workshop -xzf /tmp/workshop-content.tar.gz
+mkdir -p lab-sample-workshop && tar --strip-components 1 -C lab-sample-workshop -xzf /tmp/lab-markdown-sample.tar.gz
 ```
 
 This should leave you with the `lab-sample-workshop` sub directory. If you were creating your own workshop, you would name this after what your own workshop is on.

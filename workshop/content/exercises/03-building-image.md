@@ -1,10 +1,4 @@
----
-Title: Building Image
-PrevPage: 02-directory-layout
-NextPage: 04-workshop-config
----
-
-A container image is used as the means to package up your workshop. This way, the workshop content, along with all the command line tools and runtime language environments are in the one package, with the applications used to display the workshop content and slides.
+The recommended approach to distribute a workshop is to create a container image which packages up your workshop. This way, the workshop content, along with all the command line tools, runtime language environments and applications used to display the workshop content are together.
 
 You can use `docker` or `buildah` to build the image using the supplied `Dockerfile`. If you have no need to install extra system packages, you could also use Source-to-Image (S2I) to build the image as the base image used in a `docker` type build, can also be used as an S2I builder.
 
@@ -16,7 +10,7 @@ Before we set up the build, we will create a deployment for the workshop environ
 oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/master/templates/production.json \
   --param APPLICATION_NAME=lab-sample-workshop \
   --param AUTH_USERNAME=workshop \
-  --param AUTH_PASSWORD=$AUTH_PASSWORD
+  --param AUTH_PASSWORD=workshop
 ```
 
 This will create a deployment called `lab-sample-workshop`. Run:
@@ -67,12 +61,6 @@ This should show the hostname to access the newly deployed workshop content from
 
 https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%
 
-You will be prompted to enter a login and password. Use `workshop` for the login name. The password was set to the same value you used to access this initial workshop environment. If you have forgotten what that was, run:
+You will be prompted to login. Use `workshop` for both the username and password.
 
-```execute
-oc set env dc/lab-sample-workshop --list | grep AUTH_PASSWORD
-```
-
-Right now the content displayed is the same as this workshop. This is where you would start modifying the content.
-
-When you have a code block marked for execution, you can copy it instead of executing it, by pressing the SHIFT key while clicking on it.
+The content displayed at this point is that for the sample workshop. This is where you would start modifying the content.

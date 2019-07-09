@@ -1,9 +1,3 @@
----
-Title: Presenter Slides
-PrevPage: 09-index-ordering
-NextPage: 11-build-and-setup
----
-
 If a workshop includes a presentation, slides can be included by placing them in the `workshop/slides` directory. Anything in this directory will be served up as static files via a HTTP web server. The default web page should be provided as `index.html`.
 
 To support the use of [reveal.js](https://revealjs.com/), static media assets for that package are already bundled and available at the standard URL paths that the package expects. You should therefore be able to drop your slide presentation using reveal.js into the `workshop/slides` directory and it will work with no additional setup.

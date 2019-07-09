@@ -1,0 +1,23 @@
+name: Workshop Content
+
+modules:
+    activate:
+    - workshop-overview
+    - setup-environment
+    - exercises/01-sample-workshop
+    - exercises/02-directory-layout
+    - exercises/03-building-image
+    - exercises/04-workshop-config
+    - exercises/05-page-formatting
+    - exercises/06-data-variables
+    - exercises/07-embedded-links
+    - exercises/08-page-navigation
+    - exercises/09-template-engine
+    - exercises/10-presenter-slides
+    - exercises/11-build-and-setup
+    - exercises/12-share-workshops
+    - exercises/13-deploy-workshops
+    - exercises/14-remote-hosting
+    - exercises/15-local-deployment
+    - exercises/16-editing-content
+    - workshop-summary

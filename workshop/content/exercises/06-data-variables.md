@@ -1,9 +1,3 @@
----
-Title: Data Variables
-PrevPage: 05-page-formatting
-NextPage: 07-embedded-links
----
-
 When creating page content, you can reference a number of pre-defined data variables. The values of the data variables will be substituted into the page when rendered in the users browser.
 
 The workshop environment provides the following built-in data variables.
@@ -11,12 +5,12 @@ The workshop environment provides the following built-in data variables.
 * `username` - The identity of the user doing the workshop. This will usually only be set when the workshop is deployed in a multi user deployment. This is different from the name of the service account the workshop environment is running as.
 * `project_namespace` - The name of the OpenShift project the workshop environment is linked to and into which any deployed applications will run. Depending on how the workshop has been deployed, this may be the same project the workshop environment is running in, or may be a distinct project created for the workshop in advance.
 * `cluster_subdomain` - The subdomain used in generated route hostnames of applications deployed to the OpenShift cluster.
-* `base_url` - The root URL for the workshop content.
-* `terminal_url` - The root URL for the terminal application.
-* `console_url` - The root URL for the embedded web console.
-* `slides_url` - The root URL for the slides if provided.
+* `base_url` - The root URL path for the workshop content.
+* `terminal_url` - The root URL path for the terminal application.
+* `console_url` - The root URL path for the embedded web console.
+* `slides_url` - The root URL path for slides if provided.
 
-To use a data variable within the page content, surround it each side with `%`.
+To use a data variable within the page content, surround it each side with the character `%`.
 
 <pre><code>&percnt;username&percnt;</code></pre>
 
@@ -34,25 +28,60 @@ For the way in which this workshop has been deployed, the values of these variab
 * `terminal_url`: %terminal_url%
 * `slides_url`: %slides_url%
 
-You can introduce your own data variables by adding them in the `workshop/config.js` file. Data variables can be set with literal static values, or you can use Javscript code to calculate the value at the point the config file is read.
+You can introduce your own data variables by listing them in the `workshop/modules.yaml` file. A data variable is defined as having a default value, but where the value will be overridden if an environment variable of the same name is defined.
 
-You might for example set additional data variables based on existing environment variables set by a workshop spawner, or environment variables which were injected into the workshop environment when it was deployed.
+The field under which the data variables should be specified is `config.vars`.
 
 ```
-var config = {
-    site_title: 'Workshop Content',
-
-    // analytics: google_analytics,
-
-    variables: [
-        {
-            name: 'jupyterhub_namespace',
-            content: process.env.JUPYTERHUB_NAMESPACE
-        },
-        {
-            name: 'jupyterhub_application',
-            content: process.env.JUPYTERHUB_APPLICATION
-        }
-    ]
-};
+config:
+    vars:
+    - name: OC_VERSION
+      value: undefined
+    - name: KUBECTL_VERSION
+      value: undefined
 ```
+
+In this case, the `OC_VERSION` and `KUBECTL_VERSION` environment variables are set by the workshop environment. The values they have for this workshop are:
+
+* `OC_VERSION`: %OC_VERSION%
+* `KUBECTL_VERSION`: %KUBECTL_VERSION%
+
+Where you want to use a name for a data variable which is different to the environment variable name, you can add a list of `aliases`.
+
+```
+config:
+    vars:
+    - name: LANGUAGE
+      value: undefined
+      aliases:
+      - WORKSHOP_LANG
+```
+
+The environment variables with names given in the list of aliases will be checked first, then the environment variable with the same name as the data variable. If no environment variables with those names are set, then the default value will be used.
+
+The default value for a data variable can be overridden for a specific workshop by setting it in the corresponding workshop file. For example, `workshop/workshop-python.yaml` might contain:
+
+```
+vars:
+    LANGUAGE: python
+```
+
+If you need more control over setting the values of data variables, you can provide the file `workshop/config.js`. The form of this file should be:
+
+```
+function initialize(workshop) {
+    workshop.load_workshop();
+
+    if (process.env['WORKSHOP_FILE'] == 'workshop-python.yaml') {
+        workshop.data_variable('LANGUAGE', 'python');
+    }
+}
+
+exports.default = initialize;
+
+module.exports = exports.default;
+```
+
+This Javascript code will be loaded and the `initialize()` function called to load the workshop configuration. You can then use the `workshop.data_variable()` function to set up any data variables
+
+Because it is Javascript, you can write any code you need to query process environment variables and set data variables based on those. This might include creating composite values constructed from multiple environment variables. You could even download data variables from a remote host.

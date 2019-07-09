@@ -1,9 +1,3 @@
----
-Title: Directory Layout
-PrevPage: 01-sample-workshop
-NextPage: 03-building-image
----
-
 From the directory listing you ran, you will see a number of files located in the top level directory, and a number of sub directories forming a hierarchy.
 
 The files in the top level directory are:
@@ -15,9 +9,8 @@ The files in the top level directory are:
 Key sub directories and files contained within them are:
 
 * `workshop` - Directory under which your workshop files reside.
-* `workshop/config.js` - Configuration file for setting the workshop title, data analytics trackers, and custom data variables.
-* `workshop/content` - Directory under which your workshop content, including images to be displayed in the content, resides.
-* `workshop/slides` - Directory under which you can optionally provide a set of slides if your workshop incorporates a presentation.
+* `workshop/modules.yaml` - Configuration file with details of available modules which make up your workshop, and data variables for use in content.
+* `workshop/workshop.yaml` - Configuration file which provides the name of the workshop, the list of active modules for the workshop, and any overrides for data variables.
+* `workshop/content` - Directory under which your workshop content resides, including images to be displayed in the content.
 * `.workshop/build` - A script in which you can specify steps to be run when the image for your workshop is built.
 * `.workshop/setup` - A script in which you can specify steps to be run each time the container your workshop is deployed into starts.
-* `.s2i/environment` - Environment variables to be set for your workshop image if using Source-to-Image (S2I) to build the image, rather than building using the `Dockerfile`.

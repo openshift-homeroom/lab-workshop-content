@@ -1,9 +1,3 @@
----
-Title: Build and Setup
-PrevPage: 10-presenter-slides
-NextPage: 12-asciidoc-support
----
-
 When building the container image for a workshop, you can include any additional files that may be required to do the workshop. This can include source code files or scripts. The supplied `Dockerfile` will ensure that these files are copied into the home directory for the workshop environment. This is the same directory used as the working directory for the embedded terminals.
 
 If you need to perform any extra steps during the build process for the container image, you can add these steps to the executable `.workshop/build` script file.
