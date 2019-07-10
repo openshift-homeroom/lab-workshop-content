@@ -74,7 +74,19 @@ echo copy
 
 After clicking on this code block, you could then paste the content into another window.
 
-For AsciiDoc, similar to `execute`, you would add the `role` of `copy`:
+If you have a situation where the text being copied should be modified before use, you can denote this special case by using `copy-and-edit` instead of `copy`. The text will still be copied to the paste buffer, but will be displayed in the browser in a way to highlight that it needs to be changed before use.
+
+<pre><code>```copy-and-edit
+echo copy-and-edit
+```</code></pre>
+
+Yielding:
+
+```copy-and-edit
+echo copy-and-edit
+```
+
+For AsciiDoc, similar to `execute`, you can add the `role` of `copy` or `copy-and-edit`:
 
 <pre><code>[source,bash,role=copy]
 ----
