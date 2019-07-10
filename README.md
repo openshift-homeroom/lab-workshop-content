@@ -13,7 +13,7 @@ In the active project you want to use, run:
 
 ```
 oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/3.5.0/templates/production.json \
-  --param TERMINAL_IMAGE="quay.io/openshifthomeroom/lab-workshop-content:1.4" \
+  --param TERMINAL_IMAGE="quay.io/openshifthomeroom/lab-workshop-content:1.5" \
   --param APPLICATION_NAME=lab-workshop-content \
   --param AUTH_USERNAME=workshop \
   --param AUTH_PASSWORD=workshop
