@@ -12,7 +12,7 @@ oc new-project labs
 In the active project you want to use, run:
 
 ```
-oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/3.3.3/templates/production.json \
+oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/3.5.0/templates/production.json \
   --param TERMINAL_IMAGE="quay.io/openshifthomeroom/lab-workshop-content:1.4" \
   --param APPLICATION_NAME=lab-workshop-content \
   --param AUTH_USERNAME=workshop \
