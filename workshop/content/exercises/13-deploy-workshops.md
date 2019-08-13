@@ -8,7 +8,7 @@ oc new-app https://raw.githubusercontent.com/openshift-labs/workshop-dashboard/m
 
 Access to the workshop environment will be gated using user authentication provided by the OpenShift cluster. Only a user who is an admin of the project the workshop was deployed to, will be able to access it.
 
-Instead of relying on user authentication provided by the OpenShift cluster, you can provide the `TERMINAL_USERNAME` template parameter, as used with this workshop, to enable access using HTTP authentication. A generated password will be created which will be shown when the deployment is created, or you can query the deployment to retrieve it. Alternatively you can set a password using the `TERMINAL_PASSWORD` template parameter.
+Instead of relying on user authentication provided by the OpenShift cluster, you can provide the `AUTH_USERNAME` template parameter, as used with this workshop, to enable access using HTTP authentication. A generated password will be created which will be shown when the deployment is created, or you can query the deployment to retrieve it. Alternatively you can set a password using the `AUTH_PASSWORD` template parameter.
 
 If you need to run a workshop for many users, a separate `workshop-spawner` application is available. This supports a number of different modes for spawning multiple instances of a workshop. These are:
 
