@@ -1,4 +1,4 @@
-To get you started with your own workshop content, a number of sample Git repositories are provided. These are:
+To get you started with your own workshop content, a number of sample Git repositories are provided. Which you use will depend on whether you prefer to use Markdown or AsciiDoc formatting for content. These are:
 
 * https://github.com/openshift-homeroom/lab-markdown-sample
 * https://github.com/openshift-homeroom/lab-asciidoc-sample
