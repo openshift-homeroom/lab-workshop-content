@@ -1,16 +1,6 @@
 This is the end of the workshop.
 
-If you need to delete the custom content you deployed from this workshop, run:
-
-```execute
-oc delete all,serviceaccount,rolebinding,configmap -l app=lab-sample-workshop
-```
-
-To delete the workshop itself, from where you originally deployed the workshop, run:
-
-```copy
-oc delete all,serviceaccount,rolebinding,configmap -l app=lab-workshop-content
-```
+Check the `README` file for this workshop for instructions on how to delete it, if you had deployed it yourself.
 
 This workshop content can be found at:
 
@@ -21,12 +11,16 @@ The Git repositories which you can use as a starting point for your own workshop
 * https://github.com/openshift-homeroom/lab-markdown-sample
 * https://github.com/openshift-homeroom/lab-asciidoc-sample
 
+The workshop scripts used to deploy workshops which you include with your workshop as a Git submodule, can be found at:
+
+* https://github.com/openshift-homeroom/workshop-scripts
+
 Workshop content is used to create a custom image deriving from the workshop dashboard image found at:
 
 * https://github.com/openshift-labs/workshop-dashboard
 
-The workshop can be deployed standalone by following instructions in that repository.
+That Git repository also contains the templates used by `deploy-personal.sh`, for deploying a single workshop.
 
-Alternatively, if you need to deploy a workshop for multiple users, you need to use the workshop spawner found at:
+For multiple users, the workshop spawner and the templates used by `deploy-spawner.sh`, can be found at:
 
 * https://github.com/openshift-labs/workshop-spawner

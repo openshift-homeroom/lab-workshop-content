@@ -5,19 +5,22 @@ modules:
     - workshop-overview
     - setup-environment
     - exercises/01-sample-workshop
-    - exercises/02-directory-layout
-    - exercises/03-building-image
-    - exercises/04-workshop-config
-    - exercises/05-page-formatting
-    - exercises/06-data-variables
-    - exercises/07-embedded-links
-    - exercises/08-page-navigation
-    - exercises/09-template-engine
-    - exercises/10-presenter-slides
-    - exercises/11-build-and-setup
-    - exercises/12-share-workshops
-    - exercises/13-deploy-workshops
+    - exercises/02-workshop-scripts
+    - exercises/03-directory-layout
+    - exercises/04-building-image
+    - exercises/05-workshop-config
+    - exercises/06-page-formatting
+    - exercises/07-data-variables
+    - exercises/08-embedded-links
+    - exercises/09-page-navigation
+    - exercises/10-template-engine
+    - exercises/11-presenter-slides
+    - exercises/12-build-and-setup
+    - exercises/13-share-workshops
     - exercises/14-remote-hosting
-    - exercises/15-local-deployment
-    - exercises/16-editing-content
+    - exercises/15-deploy-settings
+    - exercises/16-multiple-users
+    - exercises/17-workshop-deletion
+    - exercises/18-local-deployment
+    - exercises/19-editing-content
     - workshop-summary

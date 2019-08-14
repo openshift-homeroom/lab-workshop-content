@@ -6,7 +6,7 @@ In the case of the URL being an external web site, when the URL is clicked, the 
 
 When the URL is a relative page referring to another page which is a part of the workshop content, the page will replace the current workshop page.
 
-* [Internal](07-embedded-links)
+* [Internal](08-embedded-links)
 
 A URL can be provided using a data variable. This could be one of the builtin data variables, or one you have added to the workshop config.
 

@@ -14,35 +14,41 @@ modules:
         exit_sign: Start Workshop
     exercises/01-sample-workshop:
         name: Sample Workshop
-    exercises/02-directory-layout:
+    exercises/02-workshop-scripts:
+        name: Workshop Scripts
+    exercises/03-directory-layout:
         name: Directory Layout
-    exercises/03-building-image:
+    exercises/04-building-image:
         name: Building Image
-    exercises/04-workshop-config:
+    exercises/05-workshop-config:
         name: Workshop Config
-    exercises/05-page-formatting:
+    exercises/06-page-formatting:
         name: Page Formatting
-    exercises/06-data-variables:
+    exercises/07-data-variables:
         name: Data Variables
-    exercises/07-embedded-links:
+    exercises/08-embedded-links:
         name: Embedding Links
-    exercises/08-page-navigation:
+    exercises/09-page-navigation:
         name: Page Navigation
-    exercises/09-template-engine:
+    exercises/10-template-engine:
         name: Template Engine
-    exercises/10-presenter-slides:
+    exercises/11-presenter-slides:
         name: Presenter Slides
-    exercises/11-build-and-setup:
+    exercises/12-build-and-setup:
         name: Build and Setup
-    exercises/12-share-workshops:
+    exercises/13-share-workshops:
         name: Share Workshops
-    exercises/13-deploy-workshops:
-        name: Deploy Workshops
     exercises/14-remote-hosting:
         name: Remote Hosting
-    exercises/15-local-deployment:
+    exercises/15-deploy-settings:
+        name: Deploy Settings
+    exercises/16-multiple-users:
+        name: Multiple Users
+    exercises/17-workshop-deletion:
+        name: Workshop Deletion
+    exercises/18-local-deployment:
         name: Local Deployment
-    exercises/16-editing-content:
+    exercises/19-editing-content:
         name: Editing Content
     workshop-summary:
         name: Workshop Summary
