@@ -1,5 +1,5 @@
 WORKSHOP_NAME=lab-workshop-content
-WORKSHOP_IMAGE=quay.io/openshifthomeroom/lab-workshop-content:1.5
+WORKSHOP_IMAGE=quay.io/openshifthomeroom/lab-workshop-content:1.6
 WORKSHOP_MEMORY=512Mi
 AUTH_USERNAME=workshop
 AUTH_PASSWORD=workshop
