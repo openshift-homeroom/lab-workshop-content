@@ -14,7 +14,7 @@ In this workshop we will use the second option of downloading a copy of the samp
 To download the sample workshop using Markdown formatting, run:
 
 ```execute
-curl -sL -o /tmp/lab-markdown-sample.tar.gz https://github.com/openshift-homeroom/lab-markdown-sample/archive/1.4.tar.gz
+curl -sL -o /tmp/lab-markdown-sample.tar.gz https://github.com/openshift-homeroom/lab-markdown-sample/archive/1.5.tar.gz
 ```
 
 then unpack it into a sub directory, by running:
