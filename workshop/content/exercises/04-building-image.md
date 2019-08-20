@@ -7,10 +7,10 @@ In this workshop the ability to build the image using the `Dockerfile` will be u
 To build our custom workshop image, we first need to deploy the sample workshop. To do this run:
 
 ```execute
-.workshop/scripts/deploy-personal.sh --settings=workspace
+.workshop/scripts/deploy-personal.sh --settings=develop
 ```
 
-Note that the `--settings=workspace` option is a special option being used in this case where we are deploying the sample workshop from within a workshop, and wouldn't always be used. We will dive further into defining the workshop settings later.
+Note that the `--settings=develop` option is a special option being used in this case where we are deploying the sample workshop from within a workshop, and wouldn't always be used. We will dive further into defining the workshop settings later.
 
 When run, the deployment script will create a deployment called `lab-sample-workshop`. The script will only return once the deployment has completed.
 
