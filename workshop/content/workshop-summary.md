@@ -17,10 +17,10 @@ The workshop scripts used to deploy workshops which you include with your worksh
 
 Workshop content is used to create a custom image deriving from the workshop dashboard image found at:
 
-* https://github.com/openshift-labs/workshop-dashboard
+* https://github.com/openshift-homeroom/workshop-dashboard
 
 That Git repository also contains the templates used by `deploy-personal.sh`, for deploying a single workshop.
 
 For multiple users, the workshop spawner and the templates used by `deploy-spawner.sh`, can be found at:
 
-* https://github.com/openshift-labs/workshop-spawner
+* https://github.com/openshift-homeroom/workshop-spawner
