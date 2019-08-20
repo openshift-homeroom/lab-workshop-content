@@ -60,6 +60,12 @@ Having made a change, you can rebuild the image and redeploy it by again running
 .workshop/scripts/build-workshop.sh
 ```
 
-Once the build and deployment has completes, [refresh the page](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) for your workshop to check the change works.
+Wait for the re-deployment by running:
+
+```execute
+oc rollout status dc/lab-sample-workshop
+```
+
+Once complete, [refresh the page](https://lab-sample-workshop-%project_namespace%.%cluster_subdomain%) for your workshop to check the change works.
 
 If you were happy with the change, you would then go onto adding and committing the change to your Git repository. This modify/build/refresh process is how you would go about working on your content and testing it.
