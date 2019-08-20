@@ -1,6 +1,6 @@
 Individual module files can use either Markdown or AsciiDoc markup formats. The extension used on the file should be `.md` or `.adoc`, corresponding to which formatting markup style you want to use. The extension is though always left off when listing the module name in the YAML files used for configuration.
 
-In conjunction with the standard Markdown and AsciiDoc, additional annotations can be applied to code blocks. The annotations are used to indicate that a user can click on the code block and have it copied to the terminal and executed, or copy the code block into the paste buffer so it can be pasted into another window.
+In conjunction with the standard [Markdown](https://github.github.com/gfm/) and [AsciiDoc](http://asciidoc.org/), additional annotations can be applied to code blocks. The annotations are used to indicate that a user can click on the code block and have it copied to the terminal and executed, or copy the code block into the paste buffer so it can be pasted into another window.
 
 If using Markdown, to annotate a code block so that it will be copied to the terminal and executed, use:
 
