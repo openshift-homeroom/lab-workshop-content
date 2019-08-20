@@ -6,7 +6,7 @@ This repository provides a workshop where you will learn how to create and struc
 To deploy the workshop, first clone a copy of this Git repository to your own machine using the command:
 
 ```
-git clone --recurse-submodules https://github.com/openshift-homeroom/lab-workshop-content.git
+git clone --single-branch --branch master --recurse-submodules https://github.com/openshift-homeroom/lab-workshop-content.git
 ```
 
 Change the working directory to `lab-workshop-content`.
