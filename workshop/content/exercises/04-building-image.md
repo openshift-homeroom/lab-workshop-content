@@ -30,10 +30,16 @@ To do this, run:
 
 This script will create a binary input build and push up the workshop content from the current directory, overriding the original sample workshop content from the image pulled from `quay.io`.
 
-Once the build and re-deployment has finished, run:
+Once the build has completed, wait for the re-deployment of the workshop to finish by running:
 
 ```execute
-oc get route lab-sample-workshop
+oc rollout status dc/lab-sample-workshop
+```
+
+Then run:
+
+```execute
+oc get route/lab-sample-workshop
 ```
 
 This should show the hostname to access the newly deployed workshop content from your browser. In this case you should also be able to click on:
