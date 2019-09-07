@@ -20,7 +20,8 @@ modules:
     - exercises/14-remote-hosting
     - exercises/15-deploy-settings
     - exercises/16-multiple-users
-    - exercises/17-workshop-deletion
-    - exercises/18-local-deployment
-    - exercises/19-editing-content
+    - exercises/17-workshop-only
+    - exercises/18-workshop-deletion
+    - exercises/19-local-deployment
+    - exercises/20-editing-content
     - workshop-summary

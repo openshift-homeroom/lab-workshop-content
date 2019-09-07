@@ -44,11 +44,13 @@ modules:
         name: Deploy Settings
     exercises/16-multiple-users:
         name: Multiple Users
-    exercises/17-workshop-deletion:
+    exercises/17-workshop-only:
+        name: Workshop Only
+    exercises/18-workshop-deletion:
         name: Workshop Deletion
-    exercises/18-local-deployment:
+    exercises/19-local-deployment:
         name: Local Deployment
-    exercises/19-editing-content:
+    exercises/20-editing-content:
         name: Editing Content
     workshop-summary:
         name: Workshop Summary
