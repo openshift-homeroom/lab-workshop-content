@@ -3,8 +3,7 @@ The aim for a workshop is to provide an interactive environment where users will
 If you need to host online a permanently available copy of the workshop content, but without the interactive environment, you can use the `deploy-personal.sh` script, but override the `DASHBOARD_MODE` settings with the value `workshop-only`.
 
 ```
-.workshop/scripts/deploy-personal.sh \
-  --override DASHBOARD_MODE=workshop-only
+.workshop/scripts/deploy-personal.sh --override DASHBOARD_MODE=workshop-only
 ```
 
 The workshop content will be displayed full screen, without the dashboard, or any access to the terminal, embedded web console, or slides.

@@ -25,8 +25,7 @@ In addition to using the `--settings` option to refer to a set of override setti
 In this case, instead of using the `--settings` option to refer to an override settings file containing settings for `AUTH_USERNAME` and `AUTH_PASSWORD`, you could have used:
 
 ```
-.workshop/scripts/deploy-personal.sh \
-  --override AUTH_USERNAME=workshop --override AUTH_PASSWORD=workshop
+.workshop/scripts/deploy-personal.sh --override AUTH_USERNAME=workshop --override AUTH_PASSWORD=workshop
 ```
 
 Where you have multiple settings you need to override, but you don't want the file that contains them to be part of the workshop itself, you can instead write them all to a distinct temporary file and then use `--override` option, but where the value supplied begins with `@` followed by the path to the temporary file.
@@ -37,6 +36,5 @@ AUTH_USERNAME=workshop
 AUTH_PASSWORD=workshop
 EOF
 
-.workshop/scripts/deploy-personal.sh \
-  --override @/tmp/override-settings.sh
+.workshop/scripts/deploy-personal.sh --override @/tmp/override-settings.sh
 ```
